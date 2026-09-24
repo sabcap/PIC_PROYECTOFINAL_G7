@@ -1,7 +1,7 @@
 # Proyecto Final — Infraestructura de Red Empresarial (Fase 1)
 
-**Universidad de San Carlos de Guatemala — Escuela de Ciencias y Sistemas**
-**Asignatura:** Prácticas Iniciales “C” | **Grupo:** 7
+- **Universidad de San Carlos de Guatemala — Escuela de Ciencias y Sistemas**
+- **Asignatura:** Prácticas Iniciales “C” | **Grupo:** 7
 
 - **Estudiantes:** Josué Javier Carrera Soyós, Alvaro Javier Paredes Sulá
 - **Fase 1 (24/09/2026):** numerales 1.1 (Virtualización), 1.2 (AD DS + DNS + GPO), 1.3 (DHCP) y 1.4 (File Server)
