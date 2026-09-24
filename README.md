@@ -1,4 +1,4 @@
-# Proyecto Final — Infraestructura de Red Empresarial (Fase 1)
+# Proyecto Final — Infraestructura de Red (Fase 1)
 
 - **Universidad de San Carlos de Guatemala — Escuela de Ciencias y Sistemas**
 - **Asignatura:** Prácticas Iniciales “C” | **Grupo:** 7

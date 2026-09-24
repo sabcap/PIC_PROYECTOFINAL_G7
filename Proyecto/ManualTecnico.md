@@ -89,7 +89,7 @@ Explicaciones accesibles para un lector con conocimientos básicos de redes y si
 | Rango DHCP | `192.168.0.1` a `192.168.0.100`, máscara `255.255.255.0 (/24)` |
 | Exclusiones DHCP | `192.168.0.1` (gateway/router) y `192.168.0.20` (servidor-dominio) |
 | Lease time | 8 días (valor predeterminado de Windows Server) |
-| Usuarios del dominio | `usuario1@servidor1.com` / `usuario2@servidor1.com`, contraseña `Password` |
+| Usuarios del dominio | `usuario1@servidor1.com` / `usuario2@servidor1.com`, contraseña `Password1` |
 | Recurso público | `\\192.168.0.20\Publica` — acceso total para usuarios autenticados (`Everyone`) |
 | Recurso privado | `\\192.168.0.20\Privada` — acceso restringido (en laboratorio: `usuario1`; ver nota sobre especificación `privado/privado`) |
 | GPO 1 | Fondo de escritorio corporativo obligatorio (logo USAC) |
@@ -214,8 +214,10 @@ Para administración diaria se utiliza la consola **Active Directory Users and C
 
 | Usuario | UPN (Principal Name) | Contraseña |
 |---|---|---|
-| usuario1 | usuario1@servidor1.com | Password |
-| usuario2 | usuario2@servidor1.com | Password |
+| usuario1 | usuario1@servidor1.com | Password1 |
+| usuario2 | usuario2@servidor1.com | Password1 |
+
+> **Nota:** La especificación original indica `Password`, pero se utilizó `Password1` (agregando el `1`) por limitaciones de la política de contraseñas del servidor, que exige complejidad mínima (mayúsculas, minúsculas y dígito).
 
 **Procedimiento (`dsa.msc > OU > New > User`):**
 
@@ -242,7 +244,7 @@ Para administración diaria se utiliza la consola **Active Directory Users and C
 Add-Computer -DomainName "servidor1.com" -Credential (Get-Credential) -Restart
 ```
 
-3. Reiniciar. En la pantalla de inicio de sesión usar **Other user** e ingresar `usuario1@servidor1.com` / `Password`. El texto `Sign in to: SERVIDOR1` confirma que autentica contra el dominio y no contra una cuenta local.
+3. Reiniciar. En la pantalla de inicio de sesión usar **Other user** e ingresar `usuario1@servidor1.com` / `Password1`. El texto `Sign in to: SERVIDOR1` confirma que autentica contra el dominio y no contra una cuenta local.
 
 Para distinguir una cuenta local de una de dominio, en Windows puede usarse `.\usuario_local` (cuenta local) frente a `servidor1\usuario1` o `usuario1@servidor1.com` (cuenta de dominio).
 
